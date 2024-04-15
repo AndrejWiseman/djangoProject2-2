@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ obj.title }}
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="card">
+
+        <h5 class="card-header">{{ obj.title }}</h5>
+        <p class="text-muted datum"><small>{{ obj.datetime | date:'d.m.Y H:i' }}</small></p>
+
+
+      <div class="card-body">
+        <p class="card-text tekst">{{ obj.content }}</p>
+        <a href="../../" class="btn btn-success">Nazad</a>
+        <a href="/lista/detail/{{ obj.id }}/delete" class="btn btn-outline-danger">Izbrisi artikl</a>
+      </div>
+    </div>
+
+
+
+
+{% endblock %}

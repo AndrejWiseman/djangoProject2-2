@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="text-white"></h1>
+
+    <div class="list-group ">
+
+        <div class="card">
+
+            <h5 class="card-header text-danger">Izbrisati artikl?</h5>
+
+          <div class="card-body">
+{#            <p class="card-text tekst">#}
+
+              <form action="." method="POST"> {% csrf_token %}
+
+                {{ form.as_p }}
+
+
+                <button type="submit" class="btn btn-danger mt-3">Izbrisi</button>
+
+              </form>
+
+{#            </p>#}
+
+            <a href="../" class="btn btn-outline-success">Nazad</a>
+          </div>
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}

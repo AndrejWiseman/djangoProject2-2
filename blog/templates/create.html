@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="text-white"></h1>
+
+    <div class="list-group ">
+
+        <div class="card">
+
+            <h5 class="card-header">Kreiraj artikl</h5>
+
+
+          <div class="card-body">
+
+            <div class="form-group">
+
+              <form action="." method="POST"> {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-success mt-3">Kreiraj</button>
+
+              </form>
+
+            </div>
+
+
+              <br>
+            <a href="../" class="btn btn-outline-success">Nazad</a>
+          </div>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

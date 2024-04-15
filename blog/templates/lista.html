@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="text-white">Lista</h1>
+
+    <div class="list-group ">
+
+        {% if obj %}
+            {% for x in obj %}
+
+            <a href="detail/{{ x.id }}" class="list-group-item list-group-item-action mt-2">{{ x.title }}</a>
+
+            {% endfor %}
+        {% else %}
+            <h3>Nema nikakvih unosa.</h3>
+        {% endif %}
+
+        <a href="create/" class="btn btn-outline-warning mt-5">Kreiraj artikl</a>
+
+    </div>
+
+
+
+{% endblock %}

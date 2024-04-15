@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Pocetna strana
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-white">Zdravo svete!</h1>
+
+    {% if request.user.is_authenticated %}
+        <h3>Dobrodosao, {{ request.user }}!</h3>
+    {% endif %}
+
+{% endblock %}
